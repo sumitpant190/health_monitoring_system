@@ -17,6 +17,10 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
+    print(height);
+    print(width);
     return SafeArea(
       child: Scaffold(
         body: Container(
@@ -91,7 +95,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 14),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -119,7 +123,7 @@ class _HomePageState extends State<HomePage> {
                                     MediaQuery.of(context).size.height * 0.4,
                                 width: MediaQuery.of(context).size.width * 0.4,
                                 child: Padding(
-                                  padding: const EdgeInsets.all(25.0),
+                                  padding: const EdgeInsets.all(15),
                                   child: Column(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
@@ -178,12 +182,12 @@ class _HomePageState extends State<HomePage> {
                                         borderRadius:
                                             BorderRadius.circular(20)),
                                     child: Padding(
-                                      padding: const EdgeInsets.all(10.0),
+                                      padding: const EdgeInsets.all(5.0),
                                       child: Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          SizedBox(height: 10),
+                                          SizedBox(height: 5),
                                           Row(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceEvenly,
@@ -225,35 +229,39 @@ class _HomePageState extends State<HomePage> {
                                 //oxygen saturation
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                    height: MediaQuery.of(context).size.height *
-                                        0.2,
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.4,
-                                    decoration: BoxDecoration(
-                                        color: Colors.orange[800],
-                                        borderRadius:
-                                            BorderRadius.circular(20)),
-                                    child: Column(
-                                      children: [
-                                        SizedBox(height: 10),
-                                        Text(
-                                          'SpO2',
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 40),
-                                        ),
-                                        SizedBox(height: 10),
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Text(
-                                            '96%',
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Container(
+                                      height:
+                                          MediaQuery.of(context).size.height *
+                                              0.2,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.4,
+                                      decoration: BoxDecoration(
+                                          color: Colors.orange[800],
+                                          borderRadius:
+                                              BorderRadius.circular(20)),
+                                      child: Column(
+                                        children: [
+                                          SizedBox(height: 5),
+                                          Text(
+                                            'SpO2',
                                             style: TextStyle(
                                                 color: Colors.white,
                                                 fontSize: 40),
                                           ),
-                                        )
-                                      ],
+                                          SizedBox(height: 10),
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Text(
+                                              '96%',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 40),
+                                            ),
+                                          )
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
