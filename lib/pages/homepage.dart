@@ -17,10 +17,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
-    final width = MediaQuery.of(context).size.width;
-    print(height);
-    print(width);
+    final h = MediaQuery.of(context).size.height;
+    final w = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
         body: Container(
@@ -32,8 +30,7 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   //circe avatar and options
                   Padding(
-                    padding:
-                        const EdgeInsets.only(top: 25.0, left: 25, right: 15),
+                    padding: EdgeInsets.only(top: 25, left: 25, right: 15),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
